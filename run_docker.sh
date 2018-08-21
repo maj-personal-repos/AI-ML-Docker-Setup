@@ -5,4 +5,20 @@ code_dir=$PWD/code
 
 echo $code_dir
 
-docker run -it -p 6006:6006 -p 8888:8888 -v "$code_dir":/home/user/code ai-ml bash
+
+unameOut="$(uname -s)"
+
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    CYGWIN*)    machine=Cygwin;;
+    MINGW*)     machine=MinGw;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+
+if [ $machine = "Mac" ]
+then
+	docker run -it -p 6006:6006 -p 8888:8888 -v "$code_dir":/home/user/code ai-ml bash
+else
+	docker run --user $(id -u) -it -p 6006:6006 -p 8888:8888 -v "$code_dir":/home/user/code ai-ml bash
+fi
