@@ -3,7 +3,17 @@ Vanilla Docker Setup for AI/ML in python.
 
 
 ## Initial Setup 
-Download and install Docker on your machine: https://docs.docker.com/get-started/. If you are running Docker on windows, you will have to enable experimental features. You can find instructions on how to do that [here](https://docs.docker.com/docker-for-windows/#experimental-mode).
+Download and install Docker on your machine: https://docs.docker.com/get-started/. 
+
+### Linux Specific Instructions
+It's probably not a good idea to run Docker as root. You can add your username to the docker group by running the following command in the terminal:
+
+`sudo usermod -aG docker your-user`
+
+You can read more about it [here](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-convenience-script).
+
+### Windows Specific Instructions
+If you are running Docker on windows, you will have to enable experimental features. You can find instructions on how to do that [here](https://docs.docker.com/docker-for-windows/#experimental-mode).
 
 ## Install Virtual Machine
 Once you have installed Docker installed, use the script provided to run the installation.
