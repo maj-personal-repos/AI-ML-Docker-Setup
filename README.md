@@ -23,7 +23,7 @@ You will need to create the code subdirectory as follows:
 
 `C:/Users/JohnDoe/AI-ML-Docker-Setup/code`
 
-You will then need to make the docker daemon aware of this directory to enable the mapping. Instructions for how to do that are found [here](https://docs.docker.com/docker-for-windows/#shared-drives)
+You will then need to make the docker daemon aware of this directory to enable the mapping. Instructions for how to do that are found [here](https://docs.docker.com/docker-for-windows/#shared-drives).
 
 ## Running Jupyter Labs
 
