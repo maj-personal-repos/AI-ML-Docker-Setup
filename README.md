@@ -15,6 +15,16 @@ Once the installation is complete, run the Docker machine using the provided scr
 
 `$ ./run_docker.sh`
 
+If you are running Docker for Windows, you will need to create a code subdirectory where you cloned the repository. For example, say that you cloned the repo to
+
+`C:/Users/JohnDoe/AI-ML-Docker-Setup`
+
+You will need to create the code subdirectory as follows:
+
+`C:/Users/JohnDoe/AI-ML-Docker-Setup/code`
+
+You will then need to make the docker daemon aware of this directory to enable the mapping. Instructions for how to do that are found [here](https://docs.docker.com/docker-for-windows/#shared-drives)
+
 ## Running Jupyter Labs
 
 Because of a bug in Docker for Mac, you may run into an issue when running jupyter lab from the VM. So, in order to run Jupyter labs you will need to run the following command:
