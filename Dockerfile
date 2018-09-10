@@ -1,5 +1,7 @@
 FROM ubuntu:18.04
 
+ENV DEBIAN_FRONTEND noninteractive
+
 # basic package install
 RUN apt-get update && apt-get install -y software-properties-common
 RUN apt-get update && apt-get install -y \
@@ -11,6 +13,7 @@ RUN apt-get update && apt-get install -y \
 	vim \
 	python3-dev \
 	python3-pip \
+	python3-tk \
 	libjpeg-dev \
 	libpng-dev && \
     apt-get clean && \
@@ -19,7 +22,7 @@ RUN apt-get update && apt-get install -y \
 
 # install pip and AI/ML packages
 RUN sudo python3 -m pip install pip --upgrade
-RUN sudo python3 -m pip install numpy==1.14.5 pandas scipy statsmodels probscale matplotlib seaborn plotly bokeh pydot scikit-learn xgboost lightgbm catboost eli5 tensorflow keras theano nltk spacy gensim scrapy pybrain jupyterlab http://download.pytorch.org/whl/cpu/torch-0.4.1-cp36-cp36m-linux_x86_64.whl torchvision sympy
+RUN sudo python3 -m pip install numpy==1.14.5 pandas scipy statsmodels probscale matplotlib seaborn plotly bokeh pydot scikit-learn xgboost lightgbm catboost eli5 tensorflow keras theano nltk spacy gensim scrapy pybrain jupyterlab http://download.pytorch.org/whl/cpu/torch-0.4.1-cp36-cp36m-linux_x86_64.whl torchvision sympy pytest
 
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
