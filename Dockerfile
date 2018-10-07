@@ -25,7 +25,7 @@ RUN apt-get update && apt-get install -y nodejs
 
 # install pip and AI/ML packages
 RUN sudo python3 -m pip install pip --upgrade
-RUN sudo python3 -m pip install numpy==1.14.5 pandas scipy statsmodels probscale matplotlib seaborn plotly bokeh pydot scikit-learn xgboost lightgbm catboost eli5 tensorflow keras theano nltk spacy gensim scrapy pybrain jupyterlab http://download.pytorch.org/whl/cpu/torch-0.4.1-cp36-cp36m-linux_x86_64.whl torchvision sympy pytest ipympl
+RUN sudo python3 -m pip install numpy==1.14.5 pandas scipy statsmodels mlxtend probscale matplotlib seaborn plotly bokeh pydot scikit-learn xgboost lightgbm catboost eli5 tensorflow keras theano nltk spacy gensim scrapy pybrain jupyterlab http://download.pytorch.org/whl/cpu/torch-0.4.1-cp36-cp36m-linux_x86_64.whl torchvision sympy pytest ipympl
 
 RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-matplotlib
 
