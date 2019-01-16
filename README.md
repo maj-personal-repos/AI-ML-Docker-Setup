@@ -39,7 +39,7 @@ You will then need to make the docker daemon aware of this directory to enable t
 
 Because of a bug in Docker for Mac, you may run into an issue when running jupyter lab from the VM. So, in order to run Jupyter labs you will need to run the following command:
 
-`$ jupyter lab --ip=* `
+`$ jupyter lab --ip=0.0.0.0`
 
 Once running, Jupyter labs will provide you with a URL that looks similar to this:
 

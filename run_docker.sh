@@ -3,7 +3,7 @@
 # you can change the path of the code dir here
 code_dir=$PWD/code
 
-echo $code_dir
+#echo $code_dir
 
 
 unameOut="$(uname -s)"

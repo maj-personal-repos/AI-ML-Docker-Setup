@@ -47,4 +47,4 @@ EXPOSE 8888
 WORKDIR /home/user
 
 CMD ["/bin/bash"]
-
+#ENTRYPOINT ["jupyter", "lab"]
