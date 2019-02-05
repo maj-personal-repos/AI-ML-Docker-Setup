@@ -20,5 +20,5 @@ if [ $machine = "Mac" ]
 then
 	docker run -it -p 6006:6006 -p 8888:8888 -v "$code_dir":/home/user/code ai-ml bash
 else
-	docker run --user $(id -u) -it -p 6006:6006 -p 8888:8888 -v "$code_dir":/home/user/code ai-ml bash
+	docker run --user user -it -p 6006:6006 -p 8888:8888 -v "$code_dir":/home/user/code ai-ml bash
 fi
