@@ -35,18 +35,37 @@ You will need to create the code subdirectory as follows:
 
 You will then need to make the docker daemon aware of this directory to enable the mapping. Instructions for how to do that are found [here](https://docs.docker.com/docker-for-windows/#shared-drives).
 
-## Running Jupyter Labs
+## Running Jupyter Lab
 
-Because of a bug in Docker for Mac, you may run into an issue when running jupyter lab from the VM. So, in order to run Jupyter labs you will need to run the following command:
+Once you are running the docker image, you are logged into the virtual machine with a bash prompt. Because of a bug in Docker for Mac, you may run into an issue when running jupyter lab from the VM. So, in order to run Jupyter labs you will need to run the following command:
 
 `$ jupyter lab --ip=0.0.0.0`
 
-Once running, Jupyter labs will provide you with a URL that looks similar to this:
+Once running, Jupyter Lab will provide you with a URL that looks similar to this:
 
 `http://(456937b722b9 or 127.0.0.1):8888/?token=XYZ`
 
 **Note:** Your "token" parameter will be different. 
 
-In order to access Jupyter Labs, copy the URL the terminal output, including the token, into your browser on your host machine. 
+In order to access Jupyter Lab, copy the URL the terminal output, including the token, into your browser on your host machine. 
 
 `http://127.0.0.1:8888/?token=XYZ`
+
+## Using RISE to preview presentation enabled notebooks
+
+If you would like to view any notebooks that have RISE presentations, unfortunately, you cannot use Jupyter Lab. You must use Jupyter Notebook instead. You can run Jupyter Notebook by issuing the following command:
+
+`jupyter notebook --ip=0.0.0.0`
+
+and then proceeding as you would with Jupyter Lab.
+
+## Optional: Using the start_jupyter.sh script
+
+I have provided a jupyter startup script that will start jupyter notebook without a password. To use it, once you start the VM, execute the following command:
+
+`start_jupyter.sh`
+
+from the VM command line.
+
+## Notes
+1. There are a lot of software packages that will be installed, so be sure to have a fast internet connection and patience..
