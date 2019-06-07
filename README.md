@@ -5,6 +5,8 @@ Vanilla Docker Setup for AI/ML in python.
 ## Initial Setup 
 Download and install Docker on your machine: https://docs.docker.com/get-started/. 
 
+This should work out of the box if you have a Mac. If you use Windows or Linux, please see the additional instructions below.
+
 ### Linux Specific Instructions
 It's probably not a good idea to run Docker as root. You can add your username to the docker group by running the following command in the terminal:
 
