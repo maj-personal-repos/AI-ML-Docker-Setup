@@ -15,7 +15,9 @@ RUN apt-get update && apt-get install -y \
 	python3-pip \
 	python3-tk \
 	libjpeg-dev \
-	libpng-dev && \
+	libpng-dev \
+	python-opengl \
+	xvfb && \
     apt-get clean && \
     apt-get autoremove && \
     rm -rf /var/lib/apt/lists/*
@@ -26,7 +28,7 @@ RUN apt-get update && apt-get install -y nodejs
 # install pip and AI/ML packages
 RUN sudo python3 -m pip install pip --upgrade
 RUN sudo python3 -m pip install numpy pandas scipy statsmodels mlxtend probscale matplotlib seaborn plotly bokeh pydot scikit-learn xgboost lightgbm catboost eli5 tensorflow keras theano nltk spacy gensim scrapy pybrain jupyterlab torch torchvision sympy pytest ipympl
-
+RUN sudo python3 -m pip install git+https://github.com/drmaj/gridworldsgym#egg=gridworldsgym
 RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-matplotlib
 
 ENV LC_ALL=C.UTF-8
