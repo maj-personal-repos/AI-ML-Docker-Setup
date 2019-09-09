@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # you can change the path of the code dir here
-code_dir=$PWD/code
+code_dir="/Users/miguelalonsojr/Dropbox/FIU/Courses/CAP 5610 - Introduction to Machine Learning/repo"
 
 #echo $code_dir
 
