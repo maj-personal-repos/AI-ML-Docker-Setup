@@ -22,11 +22,14 @@ RUN apt-get update && apt-get install -y \
     apt-get autoremove && \
     rm -rf /var/lib/apt/lists/*
 
-RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+RUN curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 RUN apt-get update && apt-get install -y nodejs
 
 # install pip and AI/ML packages
 RUN sudo python3 -m pip install pip --upgrade
+RUN sudo python3 -m pip install setuptools --upgrade
+RUN sudo python3 -m pip install six --upgrade
+RUN sudo python3 -m pip install cryptography --upgrade
 RUN sudo python3 -m pip install numpy pandas scipy statsmodels mlxtend probscale matplotlib seaborn plotly bokeh pydot scikit-learn xgboost lightgbm catboost eli5 tensorflow keras theano nltk spacy gensim scrapy pybrain jupyterlab torch torchvision sympy pytest ipympl
 RUN sudo python3 -m pip install git+https://github.com/drmaj/gridworldsgym#egg=gridworldsgym
 RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-matplotlib
@@ -50,6 +53,7 @@ EXPOSE 8888
 WORKDIR /home/user
 
 COPY start_jupyter.sh start_jupyter.sh
+RUN sudo chmod +x start_jupyter.sh
 
 CMD ["/bin/bash"]
 #ENTRYPOINT ["jupyter", "lab"]
