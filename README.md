@@ -2,8 +2,8 @@
 Vanilla Docker Setup for AI/ML in python.
 
 
-## Initial Setup 
-Download and install Docker on your machine: https://docs.docker.com/get-started/. 
+## Initial Setup
+Download and install Docker on your machine: https://docs.docker.com/get-started/.
 
 This should work out of the box if you have a Mac. If you use Windows or Linux, please see the additional instructions below.
 
@@ -47,9 +47,9 @@ Once running, Jupyter Lab will provide you with a URL that looks similar to this
 
 `http://(456937b722b9 or 127.0.0.1):8888/?token=XYZ`
 
-**Note:** Your "token" parameter will be different. 
+**Note:** Your "token" parameter will be different.
 
-In order to access Jupyter Lab, copy the URL the terminal output, including the token, into your browser on your host machine. 
+In order to access Jupyter Lab, copy the URL the terminal output, including the token, into your browser on your host machine.
 
 `http://127.0.0.1:8888/?token=XYZ`
 
@@ -71,3 +71,7 @@ from the VM command line.
 
 ## Notes
 1. There are a lot of software packages that will be installed, so be sure to have a fast internet connection and patience..
+
+## Troubleshooting
+### Permission denied on Jupyter notebook on *nix
+If the Jupyter notebook is showing a popup showing 403 forbidden errors when trying to create a notebook in the code dir, the permissions need to be changed for the `code` directory. Try deleting the directory and creating it again using `rm -rf code && mkdir code`. If that doesn't work, you will need to use `sudo chmod 755 code` or `sudo chown $USER code` to set write permissions.
