@@ -1,1 +1,3 @@
-docker build --platform linux -t ai-ml .
+@echo off
+docker build -t ai-ml .
+
