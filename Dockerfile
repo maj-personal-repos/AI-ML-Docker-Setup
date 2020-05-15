@@ -30,7 +30,7 @@ RUN sudo python3 -m pip install pip --upgrade
 RUN sudo python3 -m pip install setuptools --upgrade
 RUN sudo python3 -m pip install six --upgrade
 RUN sudo python3 -m pip install cryptography --upgrade
-RUN sudo python3 -m pip install numpy pandas scipy statsmodels mlxtend probscale matplotlib seaborn plotly bokeh pydot scikit-learn xgboost lightgbm catboost eli5 tensorflow keras theano nltk spacy gensim scrapy pybrain jupyterlab torch torchvision sympy pytest ipympl
+RUN sudo python3 -m pip install numpy pandas scipy statsmodels mlxtend probscale matplotlib seaborn plotly bokeh pydot scikit-learn xgboost lightgbm catboost eli5 tensorflow keras theano nltk spacy gensim scrapy pybrain jupyterlab torch torchvision sympy pytest ipympl jax jaxlib
 RUN sudo python3 -m pip install git+https://github.com/drmaj/gridworldsgym#egg=gridworldsgym
 RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-matplotlib
 RUN sudo python3 -m pip install RISE
