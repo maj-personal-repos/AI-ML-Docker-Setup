@@ -34,7 +34,7 @@ RUN sudo python3 -m pip install numpy pandas scipy statsmodels mlxtend probscale
 RUN sudo python3 -m pip install git+https://github.com/drmaj/gridworldsgym#egg=gridworldsgym
 RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-matplotlib
 RUN sudo python3 -m pip install RISE
-RUN sudo python3 -m pip uninstall pyglet
+RUN sudo python3 -m pip uninstall -y pyglet
 RUN sudo python3 -m pip install pyglet==1.3.2
 
 ENV LC_ALL=C.UTF-8
